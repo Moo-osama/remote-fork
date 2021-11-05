@@ -11,7 +11,7 @@ Since step #2 can easily be accomplished, we sought to achieve the other two ste
 
 ## Design Architecture
 <p align="center">
-<img src="Architecture.png" width=20% height=20%>
+<img src="Architecture.png">
 </p>
 
 ## Implementation Details
