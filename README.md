@@ -11,7 +11,7 @@ Since step #2 can easily be accomplished, we sought to achieve the other two ste
 
 ## Design Architecture
 <p align="center">
-<img src="arch.png" width=20% height=20%>
+<img src="Architecture.png" width=20% height=20%>
 </p>
 
 ## Implementation Details
@@ -58,8 +58,7 @@ return x;
 Communication: as shown in the design architecture above, the communicator node is a node that handles communication between the two hosts both ways. It does so by creating TCP sockets between the two computers to send and receive checkpoint files. It is also important to mention that each communicator node includes a server and client in order to handle communication both ways. Both communicator nodes need to be continuously running in the background of each computer so that when any process forks at any point in time, it can be immediately sent to the other computer. Therefore the main of the communicator looks like this:
 
 ```
-int
-main()
+int main()
 {
 Client_socket client;
 Server_socket server;
@@ -104,13 +103,13 @@ exit(0);
 A recorded video showing the steps needed to run the project on your machine:
 https://drive.google.com/file/d/1zbSjYsOeUS8eRozafBYHTvCour142q8i/view?usp=sharing
 
-the whole project is dockerized and available on docker hub:
+The whole project is dockerized and available on docker hub:
 https://hub.docker.com/repository/docker/osama2000/remote-fork
 
-but first you need to install docker through this link:
+But first you need to install docker through this link:
 https://docs.docker.com/engine/install/ubuntu/
 
-then run the following command through your terminal
+Then run the following command through your terminal
 ```
 Sudo docker pull osama2000/remote-fork:fork-me-tag
 ```
